@@ -1,0 +1,108 @@
+GERMAN_ANKI_WORKFLOW_CONFIG (v2.5)
+
+I am using Anki Flash Cards with the following note types:
+
+NOTE_TYPES:
+·My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Partizip II|Hilfsverb|Präsens|Präteritum|Imperativ|Beispiel|Example|Audio
+·My-German-Adjective:Deutsch|English|Aussprache|Deklination|Steigerung|Komparativ|Superlativ|Gegenteil|Synonym|Mit Präposition|Beispiel|Example|Audio
+·My-German-Adverb:Deutsch|English|Aussprache|Typ|Beispiel|Example|Audio
+·My-German-Noun:Deutsch|English|Aussprache|Genus|Beispiel|Example|Audio
+·My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
+·My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Notiz|Audio
+·My-German-Conjunction:Deutsch|English|Aussprache|Typ|Funktion|Beispiel|Example|Audio
+
+RULES:
+
+* For VERBS (My-German-Verb):
+
+- Deutsch field: Contains the infinitive form of the verb in German.
+
+- English field: Contains the infinitive form of the verb in English.
+
+- Every conjugation field (Präsens, Präteritum, …) must use a vertical HTML table.
+
+- Verbtyp field: Must contain one of: "schwach", "stark", or "gemischt".
+
+- Beispiel field: Must include all the six tenses and the three moods. Begin each example by specifying the tense or mood; i.e. "(Präsens) the_example". The Example field must translate the tense or mood as well.
+
+
+* For NOUNS (My-German-Noun):
+
+- Deutsch field: Must include both singular and plural forms, formatted as "Singular, Plural" (e.g., "Land, Länder").
+
+- English field: Must include both singular and plural translations, formatted as "singular, plural" (e.g., "country, countries").
+
+- Genus field: Contains only the definite article der, die, or das.
+
+- Aussprache field: Must include pronunciation for both the singular and plural forms (e.g., "[lant], [ˈlɛndɐ]").
+
+- Biespiel field: Must include examples for both singular and plural forms without specifying it explicitly.
+
+* For ADVERBS (My-German-Adverb):
+
+- Typ field: List all the different types that the current adverb can take (Lokaladverbien, Temporaladverbien, Modaladverbien, Kausaladverbien, Pronominaladverbien, Konjunktionaladverbien, Interrogativadverbien, Relativadverbien).
+
+- Beispiel field: Must include every single type that the current adverb can take in the format "(typ) the_example". The Example field must translate the Typ as well.
+
+* For PRAGMATIC EXPRESSIONS (My-German-PragmaticExpression):
+
+- Kontext field: A short German phrase describing the social situation or conversational function (e.g., "Um Verständnis auszudrücken," "Informeller Gesprächsbeginn," "Ausdruck der Überraschung").
+
+- Notiz field: A free-form field in German containing usage nuances, cultural context, synonyms, or grammar notes.
+
+* For PARADIGMS (My-German-Paradigm):
+
+- Paradigm field: Must contain all four cases (Nominativ, Akkusativ, Dativ, Genitiv) for all genders (masculine, feminine, neuter) and the plural.
+
+- Paradigm field: If tabular, it must use compressed HTML tables with abbreviated headers (Nom, Akk, Dat, Gen, m, f, n, pl).
+
+- Beispiel field: For every case but not necessarily for every gender, specify the case in the beginning: "(Nominative) example_sentence".
+
+* For CONJUNCTIONS (My-German-Conjunction):
+
+- Typ field: The type (nebenordnende Konjunktionen, unterordnende Konjunktionen, Konjunktionaladverbien).
+
+- Funktion field: The fuction (kopulativ, disjunktiv, adversativ, kausal, konditional, konsekutiv, konzessiv, final, temporal, modal, lokal)
+
+* For ADJECTIVES (My-German-Adjective):
+
+- Beispiel field: Must include examples for komparativ and superlativ if the adjective is steigerbar: i.e. "(komparativ) example_sentence"
+
+- Beispiel field: Must also include examples for each Mit Präposition
+
+- if there are no komparativ and superlativ forms, they should stay empty.
+
+- Gegenteil and Synonym fields: Can have multiple values separated by comma
+
+- Deklination field: Takes schwach, stark, gemischt, nur prädikativ, nicht deklinierbar
+
+- Steigerung field: Takes steigerbar, nicht steigerbar, begrenzt steigerbar
+
+* GENERAL:
+
+- Beispiel field: Multiple, each example on a new line using <BR> tag. Make the main word (or the derived variant of it) bold using HTML tags.
+
+- Example field: Multiple, each example translation in English on a new line using <BR> tag.
+
+- Audio field: Must be left blank when generating new cards.
+
+- Auto-detect word type from single German input.
+
+- Fill all fields automatically.
+
+- Maintain consistent field ordering as above.
+
+- explicitly state the target Note Type.
+
+- Communication language: English only.
+
+* OUTPUT STYLE RULE:
+
+- All card content must be presented in the following style after stating the target Note Type:
+
+· Each field name is bolded and followed by a colon.
+· Each field value is placed on the next line after field name, enclosed within a separate Code block with a language identifier and a copy button.
+
+WORKFLOW_TRIGGER: "Use German Anki workflow"
+
+After you read through these instruction, don't output a sample note.
