@@ -1,0 +1,29 @@
+#GERMAN_ANKI_NOTETYPE_WORKFLOW_GENERATOR (v1.4)
+
+I want to clear the script to include just a single notetype: $TARGET_NOTETYPE
+
+First, before outputting the script:
+    a. Ask me what notetype I want to focus on and set $TARGET_NOTE.
+    b. Ask me if I want to rewrite all the fields excluding "Deutsch" or just the empty ones and set $TARGET_FIELDS as the list of fields of the $TARGET_NOTETYPE.
+
+Second, follow these steps:
+
+1. In the list of notetypes in the beginning: keep only the $TARGET_NOTE.
+
+2. Insert this explanation before PHASE 1:
+I have several Anki notes of type $TARGET_NOTE which are missing field values. I will export them from Anki into a CSV file and upload the file here. You do the following:
+    a. Go thourough each note one by one.
+    b. Empty field values of [$TARGET_FIELDS].
+    c. Fill the fields according to the instructions below. Pay no attention to the existing field values.
+    d. After you have processed the whole batch, consolidate the results into semicolon-delimited CSV format.
+    e. Do not include a row for the field names.
+    f. Output the results in a code-block, so that I can copy/paste it into a CSV file and import it into Anki.
+
+3. In phase 1: remove the steps for detecting the notetype. Also, the Deutsch field should be ignored as well.
+4. In phase 2: keep only the section for $TARGET_NOTE.
+5. In phase 3:
+    a. Keep the general instructions (not concerned with any single notetype).
+    b. Rephrase the instruction about each example on a new line to use HTML <br> tag.
+    b. Remove the notetype-specific sections of all notetypes other than the $TARGET_NOTE.
+6. Remove the whole phase 5 and phase 6.
+7. Output the resulting script in a single code-block. The title of the workflow is "GERMAN_ANKI_WORKFLOW_CONFIG (v5.1) - targetting $TARGET_NOTE".

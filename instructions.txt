@@ -1,4 +1,4 @@
-GERMAN_ANKI_WORKFLOW_CONFIG (v5.0)
+#GERMAN_ANKI_WORKFLOW (v5.2)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Valenz|Mit Präposition|Partizip II|Hilfsverb|Präsens|Präteritum|Imperativ|Beispiel|Example|Audio
@@ -6,7 +6,7 @@ My-German-Adjective:Deutsch|English|Aussprache|Deklination|Steigerung|Komparativ
 My-German-Adverb:Deutsch|English|Aussprache|Typ|Stellung|Gegenteil|Synonym|Kommentar|Beispiel|Example|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Genitiv Singular|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Antwortmuster|Varianten|Notiz|Beispiel|Example|Audio
+My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Varianten|Notiz|Beispiel|Example|Audio
 My-German-Conjunction:Deutsch|English|Aussprache|Typ|Funktion|Satzposition|Verbstellung|Beispiel|Example|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
@@ -15,18 +15,20 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
     2. Identify target Note Type; default to the most common usage if ambiguous.
 
-    3. Fill Deutsch, English, Aussprache.
+    3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets.
 
     5. Ignore Audio field.
 
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
+    Conjugation fields include exhaustive full conjugations for all persons.
+
+    Verbtyp field: schwach, stark, gemischt.
+
     Valenz field: multiple (transitiv, intransitiv, reflexiv, mit Dativ, mit Genitiv, mit Präpositionalobjekt, mit Akk + Dativ).
 
     Mit Präposition field: multiple, follows the format of "[verb_prefix] [preposition] + [case]"; e.g. "denken an + Akk, denken über + Akk".
-
-    Verbtyp field: schwach, stark, gemischt.
 }
 
 My-German-Adjective {
@@ -44,7 +46,7 @@ My-German-Adverb {
 
     Stellung field: multiple (Vorfeld, Mittelfeld, Nachfeld, Flexibel, Satzinitial, Satzfinal).
 
-    Kommentar field: usage notes, register, and important grammar.
+    Kommentar field: a free-form field in German explaining usage notes, register, and important grammar.
 }
 
 My-German-Noun {
@@ -56,9 +58,7 @@ My-German-Paradigm {
 }
 
 My-German-PragmaticExpression {
-    Kontext field: a short German phrase describing all the social situations or conversational functions.
-
-    Antwortmuster field: the typical or expected responses to this expression in a dialogue.
+    Kontext field: a free-form field in German describing all the social situations or conversational functions.
 
     Varianten field: Other ways to express the same pragmatic function or social meaning.
 
@@ -122,13 +122,17 @@ My-German-Paradigm {
 }
 
 PHASE 4: ERROR REDUCTION MECHANISMS
-Checklist verification before output:
 
-    1. All non-Beispiel fields complete
+Mandatory checklist verification before output:
+Double check the results and don't assume that having followed the rules, they are inevitably correct.
 
-    2. Beispiel references all required elements
+    2. All non-Beispiel fields complete.
 
-    3. ALL fields for the target Note Type are present in the output.
+    3. Beispiel references all required elements.
+
+    4. Beispiel and Example fields have line breaks between different examples.
+
+    5. ALL fields for the target Note Type are present in the output.
 
 PHASE 5: OUTPUT PROTOCOL
 
