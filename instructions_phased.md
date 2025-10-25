@@ -1,13 +1,13 @@
-GERMAN_ANKI_WORKFLOW_CONFIG (v4.0)
+GERMAN_ANKI_WORKFLOW_CONFIG (v5.0)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Valenz|Mit Präposition|Partizip II|Hilfsverb|Präsens|Präteritum|Imperativ|Beispiel|Example|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Deklination|Steigerung|Komparativ|Superlativ|Gegenteil|Synonym|Mit Präposition|Beispiel|Example|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Typ|Beispiel|Example|Audio
-My-German-Noun:Deutsch|English|Aussprache|Genus|Beispiel|Example|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Typ|Stellung|Gegenteil|Synonym|Kommentar|Beispiel|Example|Audio
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Genitiv Singular|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Notiz|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Typ|Funktion|Beispiel|Example|Audio
+My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Antwortmuster|Varianten|Notiz|Beispiel|Example|Audio
+My-German-Conjunction:Deutsch|English|Aussprache|Typ|Funktion|Satzposition|Verbstellung|Beispiel|Example|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -41,6 +41,10 @@ My-German-Adjective {
 
 My-German-Adverb {
     Typ field: multiple (lokaladverbien, temporaladverbien, modaladverbien, kausaladverbien, pronominaladverbien, konjunktionaladverbien, interrogativadverbien, relativadverbien, gradadverbien, negationsadverbien, fokusadverbien).
+
+    Stellung field: multiple (Vorfeld, Mittelfeld, Nachfeld, Flexibel, Satzinitial, Satzfinal).
+
+    Kommentar field: usage notes, register, and important grammar.
 }
 
 My-German-Noun {
@@ -52,15 +56,23 @@ My-German-Paradigm {
 }
 
 My-German-PragmaticExpression {
-    Kontext field: A short German phrase describing all the social situations or conversational functions.
+    Kontext field: a short German phrase describing all the social situations or conversational functions.
 
-    Notiz field: A free-form field in German containing usage nuances, cultural context, synonyms, or grammar notes.
+    Antwortmuster field: the typical or expected responses to this expression in a dialogue.
+
+    Varianten field: Other ways to express the same pragmatic function or social meaning.
+
+    Notiz field: a free-form field in German containing usage nuances, cultural context, synonyms, or grammar notes.
 }
 
 My-German-Conjunction {
     Typ field: nebenordnende Konjunktionen, unterordnende Konjunktionen, Konjunktionaladverbien.
 
     Funktion field: multiple (kopulativ, disjunktiv, adversativ, kausal, konditional, konsekutiv, konzessiv, final, temporal, modal, lokal).
+
+    Satzposition field: multiple (Satzanfang, Mittelfeld, Nachfeld, Satzinitial).
+
+    Verbstellung field: Hauptsatzstellung (Verbzweit), Nebensatzstellung (Verbletzt), Inversionsstellung (Verberst)
 }
 
 PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
