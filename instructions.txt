@@ -1,10 +1,10 @@
-#GERMAN_ANKI_WORKFLOW (v5.2)
+#GERMAN_ANKI_WORKFLOW (v5.3)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Valenz|Mit Präposition|Partizip II|Hilfsverb|Präsens|Perfekt|Präteritum|Imperativ|Beispiel|Example|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Deklination|Steigerung|Komparativ|Superlativ|Gegenteil|Synonym|Mit Präposition|Beispiel|Example|Audio
 My-German-Adverb:Deutsch|English|Aussprache|Typ|Stellung|Gegenteil|Synonym|Kommentar|Beispiel|Example|Audio
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Genitiv Singular|Beispiel|Example|Audio
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Genitiv Singular|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Varianten|Notiz|Beispiel|Example|Audio
 My-German-Conjunction:Deutsch|English|Aussprache|Typ|Funktion|Satzposition|Verbstellung|Beispiel|Example|Audio
@@ -15,9 +15,9 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
     2. Identify target Note Type; default to the most common usage if ambiguous.
 
-    3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets.
+    3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets (e.g. [lant]).
 
-    5. Ignore Audio field.
+    4. Ignore Audio field.
 
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
@@ -51,6 +51,12 @@ My-German-Adverb {
 
 My-German-Noun {
     Genus field: der, die, das.
+
+    Plural: standard plural form. Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
+
+    Maskulinum: the male counterpart word (e.g., Tochter→Sohn). Leave empty if none exists.
+
+    Movierung: the female derived form (e.g., Lehrer→Lehrerin). Leave empty if not applicable.
 }
 
 My-German-Paradigm {
