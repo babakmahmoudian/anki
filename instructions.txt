@@ -1,13 +1,14 @@
-#GERMAN_ANKI_WORKFLOW (v5.3)
+#GERMAN_ANKI_WORKFLOW (v5.5)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Valenz|Mit Präposition|Partizip II|Hilfsverb|Präsens|Perfekt|Präteritum|Imperativ|Beispiel|Example|Audio
-My-German-Adjective:Deutsch|English|Aussprache|Deklination|Steigerung|Komparativ|Superlativ|Gegenteil|Synonym|Mit Präposition|Beispiel|Example|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Typ|Stellung|Gegenteil|Synonym|Kommentar|Beispiel|Example|Audio
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Genitiv Singular|Beispiel|Example|Audio
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Mit Präposition|Partizip II|Hilfsverb|Präsens|Imperativ|Beispiel|Example|Audio
+My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Mit Präposition|Beispiel|Example|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Typ|Beispiel|Example|Audio
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Varianten|Notiz|Beispiel|Example|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Typ|Funktion|Satzposition|Verbstellung|Beispiel|Example|Audio
+My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Audio
+My-German-Preposition:Deutsch|English|Aussprache|Regiert|Typ|Beispiel|Example|Audio
+My-German-Conjunction:Deutsch|English|Aussprache|Funktion|Beispiel|Example|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -22,31 +23,19 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
-    Conjugation fields include exhaustive full conjugations for all persons.
+    Conjugation fields include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
 
     Verbtyp field: schwach, stark, gemischt.
-
-    Valenz field: multiple (transitiv, intransitiv, reflexiv, mit Dativ, mit Genitiv, mit Präpositionalobjekt, mit Akk + Dativ).
 
     Mit Präposition field: multiple, follows the format of "[verb_prefix] [preposition] + [case]"; e.g. "denken an + Akk, denken über + Akk".
 }
 
 My-German-Adjective {
-    Deklination field: schwach, stark, gemischt, nur prädikativ, nicht deklinierbar.
-
-    Steigerung field: steigerbar, nicht steigerbar, begrenzt steigerbar.
-
-    Gegenteil and Synonym fields: multiple values.
-
     Mit Präposition fields: multiple values.
 }
 
 My-German-Adverb {
     Typ field: multiple (lokaladverbien, temporaladverbien, modaladverbien, kausaladverbien, pronominaladverbien, konjunktionaladverbien, interrogativadverbien, relativadverbien, gradadverbien, negationsadverbien, fokusadverbien).
-
-    Stellung field: multiple (Vorfeld, Mittelfeld, Nachfeld, Flexibel, Satzinitial, Satzfinal).
-
-    Kommentar field: a free-form field in German explaining usage notes, register, and important grammar.
 }
 
 My-German-Noun {
@@ -65,20 +54,16 @@ My-German-Paradigm {
 
 My-German-PragmaticExpression {
     Kontext field: a free-form field in German describing all the social situations or conversational functions.
-
-    Varianten field: Other ways to express the same pragmatic function or social meaning.
-
-    Notiz field: a free-form field in German containing usage nuances, cultural context, synonyms, or grammar notes.
 }
 
 My-German-Conjunction {
-    Typ field: nebenordnende Konjunktionen, unterordnende Konjunktionen, Konjunktionaladverbien.
-
     Funktion field: multiple (kopulativ, disjunktiv, adversativ, kausal, konditional, konsekutiv, konzessiv, final, temporal, modal, lokal).
+}
 
-    Satzposition field: multiple (Satzanfang, Mittelfeld, Nachfeld, Satzinitial).
+My-German-Preposition {
+    Regiert field: multiple (Dativ, Akkusativ, Genitiv, Dativ/Akkusativ, Dativ/Genitiv, Akkusativ/Genitiv, Nominativ).
 
-    Verbstellung field: Hauptsatzstellung (Verbzweit), Nebensatzstellung (Verbletzt), Inversionsstellung (Verberst)
+    Typ field: multiple (lokal, temporal, kausal, modal, konzessiv, final, instrumental, partitiv, direktional, neutral).
 }
 
 PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
@@ -88,13 +73,10 @@ Each example on a new line.
 Example field is the English translation of Beispiel.
 
 My-German-Verb {
-    Generate one distinct example for every individual value listed in the Valenz field.
-    
-    Separately, generate one distinct example for every individual prepositional phrase listed in the Mit Präposition field.
+    Generate one distinct example for every individual prepositional phrase listed in the Mit Präposition field.
 
     format:
         ([preposition] + [case]) the_example
-        ([Valenz]) the_example
 }
 
 My-German-Adjective {
@@ -114,17 +96,8 @@ My-German-Adverb {
         ([Typ]) the_example
 }
 
-My-German-Noun {
-    Must include an example for Singular form
-    
-    If the noun is countable add an example for Plural form.
-}
-
-My-German-Paradigm {
-    one for each case.
-    
-    format:
-        ([Kasus]) the_example
+My-German-Preposition {
+    Must include an example for each Regiert field value.
 }
 
 PHASE 4: ERROR REDUCTION MECHANISMS
