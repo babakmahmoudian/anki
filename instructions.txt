@@ -31,7 +31,7 @@ My-German-Verb {
 }
 
 My-German-Adjective {
-    Mit Präposition fields: multiple values.
+    Mit Präposition field: multiple values.
 }
 
 My-German-Adverb {
@@ -41,11 +41,11 @@ My-German-Adverb {
 My-German-Noun {
     Genus field: der, die, das.
 
-    Plural: standard plural form. Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
+    Plural field: standard plural form. Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
 
-    Maskulinum: the male counterpart word (e.g., Tochter→Sohn). Leave empty if none exists.
+    Maskulinum field: the male counterpart word (e.g., Tochter→Sohn). Leave empty if none exists.
 
-    Movierung: the female derived form (e.g., Lehrer→Lehrerin). Leave empty if not applicable.
+    Movierung field: the female derived form (e.g., Lehrer→Lehrerin). Leave empty if not applicable.
 }
 
 My-German-Paradigm {
