@@ -8,7 +8,7 @@ My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beis
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Audio
 My-German-Preposition:Deutsch|English|Aussprache|Regiert|Typ|Beispiel|Example|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Funktion|Beispiel|Example|Audio
+My-German-Conjunction:Deutsch|English|Aussprache|Funktion|Verbstellung|Beispiel|Example|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -58,6 +58,8 @@ My-German-PragmaticExpression {
 
 My-German-Conjunction {
     Funktion field: multiple (kopulativ, disjunktiv, adversativ, kausal, konditional, konsekutiv, konzessiv, final, temporal, modal, lokal).
+
+    Verbstellung field: koordinierend, subordinierend
 }
 
 My-German-Preposition {
