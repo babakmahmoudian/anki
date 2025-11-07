@@ -1,8 +1,8 @@
-#GERMAN_ANKI_WORKFLOW (v5.5)
+#GERMAN_ANKI_WORKFLOW (v6.0)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Mit Präposition|Partizip II|Hilfsverb|Präsens|Imperativ|Beispiel|Example|Audio
-My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Mit Präposition|Beispiel|Example|Audio
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Example|Audio
+My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Example|Audio
 My-German-Adverb:Deutsch|English|Aussprache|Typ|Beispiel|Example|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
@@ -23,15 +23,14 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
-    Conjugation fields include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
+    Präsens, Präteritum, Perfekt, Imperativ fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
+        - Other conjugation fields that specify the person: Only for that person.
 
     Verbtyp field: schwach, stark, gemischt, Unregelmäßig.
-
-    Mit Präposition field: multiple, follows the format of "[verb_prefix] [preposition] + [case]"; e.g. "denken an + Akk, denken über + Akk".
 }
 
 My-German-Adjective {
-    Mit Präposition field: multiple values.
+    Komparativ and Superlativ fields: Leave empty if not applicable.
 }
 
 My-German-Adverb {
@@ -74,21 +73,8 @@ Each example on a new line.
 
 Example field is the English translation of Beispiel.
 
-My-German-Verb {
-    Generate one distinct example for every individual prepositional phrase listed in the Mit Präposition field.
-
-    format:
-        ([preposition] + [case]) the_example
-}
-
 My-German-Adjective {
     Must include examples for komparativ and superlativ if available.
-
-    Must also include examples for each Mit Präposition.
-
-    format:
-        ([Steigerungsform]) the_example
-        (mit Präposition [Präposition]) the_example
 }
 
 My-German-Adverb {
