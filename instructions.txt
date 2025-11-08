@@ -1,7 +1,7 @@
 #GERMAN_ANKI_WORKFLOW (v6.0)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Example|Audio
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Example|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Example|Audio
 My-German-Adverb:Deutsch|English|Aussprache|Typ|Beispiel|Example|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Example|Audio
@@ -27,6 +27,14 @@ My-German-Verb {
         - Other conjugation fields that specify the person: Only for that person.
 
     Verbtyp field: schwach, stark, gemischt, unregelmäßig.
+
+    Vokalwechsel field: shows the pattern of stem vowel changes for the verb:
+        - In x→y→z style, where:
+            x = stem vowel in Infinitiv
+            y = stem vowel in Präteritum (ich form)
+            z = stem vowel in Partizip II
+        - e.g. for fahren: "a→ä→u".
+        - For weak/regular verbs, leave empty.
 }
 
 My-German-Adjective {
