@@ -26,7 +26,7 @@ My-German-Verb {
     Präsens, Präteritum, Perfekt, Imperativ fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
         - Other conjugation fields that specify the person: Only for that person.
 
-    Verbtyp field: schwach, stark, gemischt, Unregelmäßig.
+    Verbtyp field: schwach, stark, gemischt, unregelmäßig.
 }
 
 My-German-Adjective {
