@@ -1,14 +1,14 @@
-#GERMAN_ANKI_WORKFLOW (v6.0)
+#GERMAN_ANKI_WORKFLOW (v6.1)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Example|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Example|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Typ|Beispiel|Example|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Beispiel|Example|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Audio
-My-German-Preposition:Deutsch|English|Aussprache|Regiert|Typ|Beispiel|Example|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Funktion|Verbstellung|Beispiel|Example|Audio
+My-German-Preposition:Deutsch|English|Aussprache|Regiert|Beispiel|Example|Audio
+My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Beispiel|Example|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -41,10 +41,6 @@ My-German-Adjective {
     Komparativ and Superlativ fields: Leave empty if not applicable.
 }
 
-My-German-Adverb {
-    Typ field: multiple (lokaladverbien, temporaladverbien, modaladverbien, kausaladverbien, pronominaladverbien, konjunktionaladverbien, interrogativadverbien, relativadverbien, gradadverbien, negationsadverbien, fokusadverbien).
-}
-
 My-German-Noun {
     Genus field: der, die, das.
 
@@ -64,15 +60,11 @@ My-German-PragmaticExpression {
 }
 
 My-German-Conjunction {
-    Funktion field: multiple (kopulativ, disjunktiv, adversativ, kausal, konditional, konsekutiv, konzessiv, final, temporal, modal, lokal).
-
     Verbstellung field: koordinierend, subordinierend
 }
 
 My-German-Preposition {
     Regiert field: multiple (Dativ, Akkusativ, Genitiv, Dativ/Akkusativ, Dativ/Genitiv, Akkusativ/Genitiv, Nominativ).
-
-    Typ field: multiple (lokal, temporal, kausal, modal, konzessiv, final, instrumental, partitiv, direktional, neutral).
 }
 
 PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
@@ -83,13 +75,6 @@ Example field is the English translation of Beispiel.
 
 My-German-Adjective {
     Must include examples for komparativ and superlativ if available.
-}
-
-My-German-Adverb {
-    Must include an example for each Typ.
-    
-    format:
-        ([Typ]) the_example
 }
 
 My-German-Preposition {
