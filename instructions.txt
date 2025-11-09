@@ -7,7 +7,7 @@ My-German-Adverb:Deutsch|English|Aussprache|Beispiel|Example|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Example|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Audio
-My-German-Preposition:Deutsch|English|Aussprache|Regiert|Beispiel|Example|Audio
+My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Example|Audio
 My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Beispiel|Example|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
@@ -65,6 +65,8 @@ My-German-Conjunction {
 
 My-German-Preposition {
     Regiert field: multiple (Dativ, Akkusativ, Genitiv, Dativ/Akkusativ, Dativ/Genitiv, Akkusativ/Genitiv, Nominativ).
+
+    Verwendung field: a free-form field in English including short usage notes or rules; e.g. for "zu": "used with people, buildings, institutions; Dativ; emphasizes direction toward".
 }
 
 PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
