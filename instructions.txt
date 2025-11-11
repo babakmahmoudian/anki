@@ -17,6 +17,7 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
     2. Identify target Note Type; default to the most common usage if ambiguous.
 
     3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets (e.g. [lant]).
+        - Deutsch for the type My-German-Noun should not contain the article. 
 
     4. Ignore Audio field.
 
