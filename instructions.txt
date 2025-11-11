@@ -1,4 +1,4 @@
-#GERMAN_ANKI_WORKFLOW (v6.1)
+#GERMAN_ANKI_WORKFLOW (v6.2)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Example|Audio
@@ -23,7 +23,9 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
-    Präsens, Präteritum, Perfekt, Imperativ fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
+    Imperativ field: must contain the three Imperativ forms for "du", "ihr", and "Sie/sie".
+
+    Präsens, Präteritum, Perfekt fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
         - Other conjugation fields that specify the person: Only for that person.
 
     Verbtyp field: schwach, stark, gemischt, unregelmäßig.
