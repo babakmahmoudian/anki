@@ -1,14 +1,14 @@
-#GERMAN_ANKI_WORKFLOW (v6.2)
+#GERMAN_ANKI_WORKFLOW (v7.0)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Example|Audio
-My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Example|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Beispiel|Example|Audio
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Example|Audio
-My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel|Example
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Example|Audio
-My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Example|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Beispiel|Example|Audio
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
+My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Beispiel|Audio
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Audio
+My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel
+My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Audio
+My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Audio
+My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Beispiel|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -36,7 +36,7 @@ My-German-Verb {
             x = stem vowel in Infinitiv
             y = stem vowel in Präteritum (ich form)
             z = stem vowel in Partizip II
-        - e.g. for fahren: "a→ä→u".
+        - e.g. for fahren: "a→u→a".
         - For weak/regular verbs, leave empty.
 }
 
@@ -47,11 +47,11 @@ My-German-Adjective {
 My-German-Noun {
     Genus field: der, die, das.
 
-    Plural field: standard plural form. Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
+    Plural field: standard plural form without article (e.g., Sohn→Söhne). Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
 
-    Maskulinum field: the male counterpart word (e.g., Tochter→Sohn). Leave empty if none exists.
+    Maskulinum field: the male counterpart word without article (e.g., Tochter→Sohn). Leave empty if none exists.
 
-    Movierung field: the female derived form (e.g., Lehrer→Lehrerin). Leave empty if not applicable.
+    Movierung field: the female derived form without article (e.g., Lehrer→Lehrerin). Leave empty if not applicable.
 }
 
 My-German-Paradigm {
@@ -69,14 +69,14 @@ My-German-Conjunction {
 My-German-Preposition {
     Regiert field: multiple (Dativ, Akkusativ, Genitiv, Dativ/Akkusativ, Dativ/Genitiv, Akkusativ/Genitiv, Nominativ).
 
-    Verwendung field: a free-form field in English including short usage notes or rules; e.g. for "zu": "used with people, buildings, institutions; Dativ; emphasizes direction toward".
+    Verwendung field: a free-form field in English including short usage notes or rules; does not contain any HTML except for the <br> tag;
+        - e.g. for "zu": "used with people, buildings, institutions;<br>emphasizes direction toward.".
 }
 
 PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
 
-Each example on a new line.
-
-Example field is the English translation of Beispiel.
+Each deutsch example on a new line and enclosed in <b></b> tags, folowed by a <br>, and the Enlish translation without formatting on the next line;
+    - e.g. for "Auge": "<b>Mein Auge tut weh.</b><br>My eye hurts.<br><b>Sie hat blaue Augen.</b><br>She has blue eyes."
 
 My-German-Adjective {
     Must include examples for komparativ and superlativ if available.
@@ -95,8 +95,6 @@ Double check the results and don't assume that having followed the rules, they a
 
     3. Beispiel references all required elements.
 
-    4. Beispiel and Example fields have line breaks between different examples.
-
     5. ALL fields for the target Note Type are present in the output.
 
 PHASE 5: OUTPUT PROTOCOL
@@ -110,7 +108,3 @@ PHASE 5: OUTPUT PROTOCOL
         b. On the very next line, create a code block.
         c. Place only the field's value inside this code block.
         d. Close the code block.
-
-PHASE 6: POST-OUTPUT PROMPT
-
-don't output a sample note.
