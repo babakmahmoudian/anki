@@ -1,11 +1,11 @@
-#GERMAN_ANKI_WORKFLOW (v7.0)
+#GERMAN_ANKI_WORKFLOW (v7.2)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Beispiel|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Funktion|Position|Beispiel|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Audio
-My-German-Paradigm:Deutsch|English|Paradigm|Verwendung|Beispiel
+My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Audio
 My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Audio
 My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Beispiel|Audio
@@ -44,6 +44,12 @@ My-German-Adjective {
     Komparativ and Superlativ fields: Leave empty if not applicable.
 }
 
+My-German-Adverb {
+    Funktion field: indicates the type of adverb (Satzadverb, Modaladverb, Temporal, Lokal, Kausal, Grad, Fokus/Emphasis).
+
+    Position field: determines where the adverb usually goes in a sentence (Vorfeld, Mittelfeld, Nachfeld).
+}
+
 My-German-Noun {
     Genus field: der, die, das.
 
@@ -56,10 +62,12 @@ My-German-Noun {
 
 My-German-Paradigm {
     Paradigm field: all four cases for all genders and the plural.
+
+    Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
 }
 
 My-German-PragmaticExpression {
-    Kontext field: a free-form field in German describing all the social situations or conversational functions.
+    Kontext field: a free-form field in English describing all the social situations or conversational functions. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
 }
 
 My-German-Conjunction {
@@ -69,7 +77,7 @@ My-German-Conjunction {
 My-German-Preposition {
     Regiert field: multiple (Dativ, Akkusativ, Genitiv, Dativ/Akkusativ, Dativ/Genitiv, Akkusativ/Genitiv, Nominativ).
 
-    Verwendung field: a free-form field in English including short usage notes or rules; does not contain any HTML except for the <br> tag;
+    Verwendung field: a free-form field in English including short usage notes or rules;  It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary;
         - e.g. for "zu": "used with people, buildings, institutions;<br>emphasizes direction toward.".
 }
 
