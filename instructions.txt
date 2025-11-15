@@ -1,9 +1,9 @@
-#GERMAN_ANKI_WORKFLOW (v7.2)
+#GERMAN_ANKI_WORKFLOW (v7.5)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Funktion|Position|Beispiel|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Funktion|Beispiel|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Audio
@@ -45,9 +45,7 @@ My-German-Adjective {
 }
 
 My-German-Adverb {
-    Funktion field: indicates the type of adverb (Satzadverb, Modaladverb, Temporal, Lokal, Kausal, Grad, Fokus/Emphasis).
-
-    Position field: determines where the adverb usually goes in a sentence (Vorfeld, Mittelfeld, Nachfeld).
+    Funktion field: indicates the type of adverb (Satzadverb, Modaladverb, Temporal, Lokal, Kausal, Grad, Fokus/Emphasis, Konjunktionaladverb).
 }
 
 My-German-Noun {
