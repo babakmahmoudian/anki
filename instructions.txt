@@ -1,14 +1,14 @@
-#GERMAN_ANKI_WORKFLOW (v7.5)
+#GERMAN_ANKI_WORKFLOW (v8.1)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Funktion|Beispiel|Audio
+My-German-Adverb:Deutsch|English|Aussprache|Funktion|Notiz|Beispiel|Audio
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Audio
 My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Beispiel|Audio
+My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Notiz|Beispiel|Audio
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -24,6 +24,8 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
+    Imperativ (du) field: must contain only the second person singular Imperativ form (for "du").
+
     Imperativ field: must contain the three Imperativ forms for "du", "ihr", and "Sie/sie".
 
     Präsens, Präteritum, Perfekt fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
@@ -38,6 +40,8 @@ My-German-Verb {
             z = stem vowel in Partizip II
         - e.g. for fahren: "a→u→a".
         - For weak/regular verbs, leave empty.
+
+    Kasusregierung field: specifies the case governance of the verb; can be none, one, or multiple of (akkusativ, dativ, genitiv, reflexiv).
 }
 
 My-German-Adjective {
@@ -46,6 +50,8 @@ My-German-Adjective {
 
 My-German-Adverb {
     Funktion field: indicates the type of adverb (Satzadverb, Modaladverb, Temporal, Lokal, Kausal, Grad, Fokus/Emphasis, Konjunktionaladverb).
+
+    Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
 }
 
 My-German-Noun {
@@ -70,6 +76,8 @@ My-German-PragmaticExpression {
 
 My-German-Conjunction {
     Verbstellung field: koordinierend, subordinierend
+
+    Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
 }
 
 My-German-Preposition {
