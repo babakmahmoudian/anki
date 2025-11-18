@@ -1,10 +1,10 @@
-#GERMAN_ANKI_WORKFLOW (v8.1)
+#GERMAN_ANKI_WORKFLOW (v9.0)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Audio
 My-German-Adverb:Deutsch|English|Aussprache|Funktion|Notiz|Beispiel|Audio
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Maskulinum|Movierung|Beispiel|Audio
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel|Audio
 My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Audio
 My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Audio
@@ -17,7 +17,7 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
     2. Identify target Note Type; default to the most common usage if ambiguous.
 
     3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets (e.g. [lant]).
-        - Deutsch for the type My-German-Noun should not contain the article. 
+        - Deutsch field for the type My-German-Noun should not contain the article. 
 
     4. Ignore Audio field.
 
@@ -58,10 +58,6 @@ My-German-Noun {
     Genus field: der, die, das.
 
     Plural field: standard plural form without article (e.g., Sohn→Söhne). Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
-
-    Maskulinum field: the male counterpart word without article (e.g., Tochter→Sohn). Leave empty if none exists.
-
-    Movierung field: the female derived form without article (e.g., Lehrer→Lehrerin). Leave empty if not applicable.
 }
 
 My-German-Paradigm {
