@@ -1,4 +1,4 @@
-#GERMAN_ANKI_WORKFLOW (v9.1)
+#GERMAN_ANKI_WORKFLOW (v9.2)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens|Präteritum|Perfekt|Imperativ|Beispiel
@@ -17,7 +17,6 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
     2. Identify target Note Type; default to the most common usage if ambiguous.
 
     3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets (e.g. [lant]).
-        - Deutsch field for the type My-German-Noun should not contain the article. 
 
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
@@ -50,6 +49,8 @@ My-German-Adverb {
 }
 
 My-German-Noun {
+    Deutsch and Genitiv Singular fields: should not contain the article. 
+
     Genus field: der, die, das.
 
     Plural field: standard plural form without article (e.g., Sohn→Söhne). Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
