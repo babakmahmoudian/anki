@@ -1,14 +1,14 @@
 #GERMAN_ANKI_WORKFLOW (v9.0)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens (du)|Präsens (er/sie/es)|Präsens|Präteritum (ich)|Präteritum|Partizip II|Hilfsverb|Perfekt|Imperativ (du)|Imperativ|Beispiel|Audio
-My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel|Audio
-My-German-Adverb:Deutsch|English|Aussprache|Funktion|Notiz|Beispiel|Audio
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel|Audio
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens|Präteritum|Perfekt|Imperativ|Beispiel
+My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel
+My-German-Adverb:Deutsch|English|Aussprache|Funktion|Notiz|Beispiel
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
 My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel|Audio
-My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel|Audio
-My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Notiz|Beispiel|Audio
+My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel
+My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel
+My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Notiz|Beispiel
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -19,17 +19,12 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
     3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets (e.g. [lant]).
         - Deutsch field for the type My-German-Noun should not contain the article. 
 
-    4. Ignore Audio field.
-
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
-    Imperativ (du) field: must contain only the second person singular Imperativ form (for "du").
-
     Imperativ field: must contain the three Imperativ forms for "du", "ihr", and "Sie/sie".
 
     Präsens, Präteritum, Perfekt fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
-        - Other conjugation fields that specify the person: Only for that person.
 
     Verbtyp field: schwach, stark, gemischt, unregelmäßig.
 
