@@ -1,10 +1,10 @@
-#GERMAN_ANKI_WORKFLOW (v9.0)
+#GERMAN_ANKI_WORKFLOW (v9.1)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens|Präteritum|Perfekt|Imperativ|Beispiel
 My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel
 My-German-Adverb:Deutsch|English|Aussprache|Funktion|Notiz|Beispiel
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
+My-German-Noun:Deutsch|English|Aussprache|Genus|Genitiv Singular|Plural|Beispiel
 My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel
 My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel
