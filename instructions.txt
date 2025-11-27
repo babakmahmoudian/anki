@@ -1,10 +1,10 @@
-#GERMAN_ANKI_WORKFLOW (v9.2)
+#GERMAN_ANKI_WORKFLOW (v10.0)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens|Präteritum|Perfekt|Imperativ|Beispiel
-My-German-Adjective:Deutsch|English|Aussprache|Komparativ|Superlativ|Beispiel
-My-German-Adverb:Deutsch|English|Aussprache|Funktion|Notiz|Beispiel
-My-German-Noun:Deutsch|English|Aussprache|Genus|Genitiv Singular|Plural|Beispiel
+My-German-Adjective:Deutsch|English|Aussprache|Beispiel
+My-German-Adverb:Deutsch|English|Aussprache|Notiz|Beispiel
+My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
 My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel
 My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel
@@ -38,18 +38,12 @@ My-German-Verb {
     Kasusregierung field: specifies the case governance of the verb; can be none, one, or multiple of (akkusativ, dativ, genitiv, reflexiv).
 }
 
-My-German-Adjective {
-    Komparativ and Superlativ fields: Leave empty if not applicable.
-}
-
 My-German-Adverb {
-    Funktion field: indicates the type of adverb (Satzadverb, Modaladverb, Temporal, Lokal, Kausal, Grad, Fokus/Emphasis, Konjunktionaladverb).
-
     Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
 }
 
 My-German-Noun {
-    Deutsch and Genitiv Singular fields: should not contain the article. 
+    Deutsch field: should not contain the article. 
 
     Genus field: der, die, das.
 
@@ -83,10 +77,6 @@ PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
 
 Each deutsch example on a new line and enclosed in <b></b> tags, folowed by a <br>, and the Enlish translation without formatting on the next line;
     - e.g. for "Auge": "<b>Mein Auge tut weh.</b><br>My eye hurts.<br><b>Sie hat blaue Augen.</b><br>She has blue eyes."
-
-My-German-Adjective {
-    Must include examples for komparativ and superlativ if available.
-}
 
 My-German-Preposition {
     Must include an example for each Regiert field value.
