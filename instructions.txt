@@ -1,7 +1,7 @@
 #GERMAN_ANKI_WORKFLOW (v10.0)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Kasusregierung|Präsens|Präteritum|Imperativ|Beispiel
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Kasusregierung|Präsens|Präteritum|Hilfsverb|Partizip II|Imperativ|Beispiel
 My-German-Adjective:Deutsch|English|Aussprache|Beispiel
 My-German-Adverb:Deutsch|English|Aussprache|Notiz|Beispiel
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
