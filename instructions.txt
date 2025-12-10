@@ -1,7 +1,7 @@
 #GERMAN_ANKI_WORKFLOW (v10.0)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Vokalwechsel|Kasusregierung|Präsens|Präteritum|Perfekt|Imperativ|Beispiel
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Kasusregierung|Präsens|Präteritum|Imperativ|Beispiel
 My-German-Adjective:Deutsch|English|Aussprache|Beispiel
 My-German-Adverb:Deutsch|English|Aussprache|Notiz|Beispiel
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
@@ -23,19 +23,13 @@ PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 My-German-Verb {
     Imperativ field: must contain the three Imperativ forms for "du", "ihr", and "Sie/sie".
 
-    Präsens, Präteritum, Perfekt fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
+    Präsens and Präteritum fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
 
     Verbtyp field: schwach, stark, gemischt, unregelmäßig.
 
-    Vokalwechsel field: shows the pattern of stem vowel changes for the verb:
-        - In x→y→z style, where:
-            x = stem vowel in Infinitiv
-            y = stem vowel in Präteritum (ich form)
-            z = stem vowel in Partizip II
-        - e.g. for fahren: "a→u→a".
-        - For weak/regular verbs, leave empty.
-
     Kasusregierung field: specifies the case governance of the verb; can be none, one, or multiple of (akkusativ, dativ, genitiv, reflexiv).
+
+    Hilfsverb field: The auxiliary verb used for the Perfekt tense (haben or sein).
 }
 
 My-German-Adverb {
