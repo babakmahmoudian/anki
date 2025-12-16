@@ -21,6 +21,7 @@ notes_to_update = (
 )
 
 # Step 4: Update only the filtered notes
+total = 0
 for note in notes_to_update:
     genus = note['fields']['Genus']['value']
     deutsch = note['fields']['Deutsch']['value']
@@ -38,4 +39,6 @@ for note in notes_to_update:
         }
     })
 
-print("full_noun updated for all notes where it was empty.")
+    total += 1
+
+print(f"full_noun updated for {total} notes." if total else "No notes needed updating.")

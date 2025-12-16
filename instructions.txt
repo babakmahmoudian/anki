@@ -1,7 +1,7 @@
-#GERMAN_ANKI_WORKFLOW (v11.0)
+#GERMAN_ANKI_WORKFLOW (v11.2)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Kasusregierung|Präsens|Präteritum|Hilfsverb|Partizip II|Imperativ|Beispiel
+My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Kasusregierung|Präsens|Hilfsverb|Partizip II|Imperativ|Beispiel
 My-German-Adjective:Deutsch|English|Aussprache|Beispiel
 My-German-Adverb:Deutsch|English|Aussprache|Notiz|Beispiel
 My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
@@ -16,14 +16,14 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
     2. Identify target Note Type; default to the most common usage if ambiguous.
 
-    3. Fill Deutsch, English, Aussprache. Aussprache should be enclosed in brackets (e.g. [lant]).
+    3. Fill Deutsch, English, Aussprache. Aussprache should be in IPA format and enclosed in brackets (e.g. [lant]).
 
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
     Imperativ field: must contain the three Imperativ forms for "du", "ihr", and "Sie/sie".
 
-    Präsens and Präteritum fields: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
+    Präsens field: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
 
     Verbtyp field: schwach, stark, gemischt, unregelmäßig.
 
@@ -71,6 +71,10 @@ PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
 
 Each deutsch example on a new line and enclosed in <b></b> tags, folowed by a <br>, and the Enlish translation without formatting on the next line;
     - e.g. for "Auge": "<b>Mein Auge tut weh.</b><br>My eye hurts.<br><b>Sie hat blaue Augen.</b><br>She has blue eyes."
+
+My-German-Verb {
+    Must include an example for all tenses (präsens, perfekt, imperativ) if applicable.
+}
 
 My-German-Preposition {
     Must include an example for each Regiert field value.
