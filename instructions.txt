@@ -1,14 +1,13 @@
-#GERMAN_ANKI_WORKFLOW (v11.2)
+#GERMAN_ANKI_WORKFLOW (v12)
 
 I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Verbtyp|Kasusregierung|Präsens|Hilfsverb|Partizip II|Imperativ|Beispiel
+My-German-Verb:Deutsch|English|Aussprache|Perfekt|Beispiel
 My-German-Adjective:Deutsch|English|Aussprache|Beispiel
-My-German-Adverb:Deutsch|English|Aussprache|Notiz|Beispiel
-My-German-Noun:Deutsch|English|Aussprache|Genus|Plural|Beispiel
-My-German-Paradigm:Deutsch|English|Paradigm|Notiz|Beispiel
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Kontext|Beispiel
-My-German-Preposition:Deutsch|English|Aussprache|Regiert|Verwendung|Beispiel
-My-German-Conjunction:Deutsch|English|Aussprache|Verbstellung|Notiz|Beispiel
+My-German-Adverb:Deutsch|English|Aussprache|Beispiel
+My-German-Noun:Deutsch|English|Aussprache|Plural|Beispiel
+My-German-PragmaticExpression:Deutsch|English|Aussprache|Notiz|Beispiel
+My-German-Preposition:Deutsch|English|Aussprache|Notiz|Beispiel
+My-German-Conjunction:Deutsch|English|Aussprache|Notiz|Beispiel
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -21,75 +20,75 @@ PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 PHASE 2: STRUCTURAL FIELDS (Type-Specific)
 
 My-German-Verb {
-    Imperativ field: must contain the three Imperativ forms for "du", "ihr", and "Sie/sie".
-
-    Präsens field: must include exhaustive full conjugations for all persons; e.g. "esse, isst, isst, essen, esst, essen".
-
-    Verbtyp field: schwach, stark, gemischt, unregelmäßig.
-
-    Kasusregierung field: specifies the case governance of the verb; can be none, one, or multiple of (akkusativ, dativ, genitiv, reflexiv).
-
-    Hilfsverb field: The auxiliary verb used for the Perfekt tense (haben or sein).
+    Perfekt: The auxiliary verb used for the Perfekt tense (haben or sein) plus the Partizip II (e.g. "haben + geschrieben")
 }
 
 My-German-Adverb {
-    Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+    No special instructions.
+}
+
+My-German-Adjective {
+    No special instructions.
 }
 
 My-German-Noun {
-    Deutsch field: should not contain the article. 
-
-    Genus field: der, die, das.
+    Deutsch field: contains the article followed by the Noun (e.g. "der Hund");
+        - If the noun can stand for both masculine and feminine, put "der-die" (e.g. "der-die Bekannte");
+        - if there exists a separate feminine form for the noun, prioratize the masculine form and use only the "der" article (e.g. "der Bäcker").
 
     Plural field: standard plural form without article (e.g., Sohn→Söhne). Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
 }
 
-My-German-Paradigm {
-    Paradigm field: all four cases for all genders and the plural.
-
-    Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
-}
-
 My-German-PragmaticExpression {
-    Kontext field: a free-form field in English describing all the social situations or conversational functions. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+    Notiz field: a free-form field in English:
+        - Describes all the social situations or conversational functions,
+        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - e.g. for "Es tut mir leid" the "Notiz" field would contain:
+            "Used to express apology or sympathy; appropriate in both formal and informal contexts."
 }
 
 My-German-Conjunction {
-    Verbstellung field: koordinierend, subordinierend
-
-    Notiz field: a free-form field in English including short usage notes, rules, and extra information and explanation. It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+    Notiz field: a free-form field in English:
+        - Includes Verbstellung (koordinierend or subordinierend), short usage notes, rules, and extra information and explanation,
+        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - e.g. for "obwohl" the "Notiz" field would contain:
+            "
+            <p><b>"Obwohl"</b> is used to introduce a subordinate clause expressing a concession or contrast, similar to "although" or "even though" in English.</p>
+            <p><b>Usage rules:</b></p>
+            <ul>
+            <li>It always introduces a subordinate clause, which pushes the verb to the end of the clause.</li>
+            <li>The main clause can appear before or after the "obwohl"-clause.</li>
+            <li>It is used to indicate that the action or fact in the main clause occurs despite the condition in the subordinate clause.</li>
+            </ul>
+            "
 }
 
 My-German-Preposition {
-    Regiert field: multiple (Dativ, Akkusativ, Genitiv, Dativ/Akkusativ, Dativ/Genitiv, Akkusativ/Genitiv, Nominativ).
-
-    Verwendung field: a free-form field in English including short usage notes or rules;  It may contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary;
-        - e.g. for "zu": "used with people, buildings, institutions;<br>emphasizes direction toward.".
+    Notiz field: a free-form field in English:
+        - Includes short usage notes or rules, and Regiert (Dativ, Akkusativ, Genitiv)
+        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - e.g. for "mit" the "Notiz" field would contain:
+            "Used to indicate a time before something (<b>temporal</b>), a position in front of something (<b>spatial</b>), or origin/source/protection (e.g., <i>schützen vor</i>)."
 }
 
-PHASE 3: BEISPIEL GENERATION (Type-Specific Rules)
+PHASE 3: BEISPIEL GENERATION
 
-Each deutsch example on a new line and enclosed in <b></b> tags, folowed by a <br>, and the Enlish translation without formatting on the next line;
-    - e.g. for "Auge": "<b>Mein Auge tut weh.</b><br>My eye hurts.<br><b>Sie hat blaue Augen.</b><br>She has blue eyes."
+Each example is a full sentence in deutsch.
 
-My-German-Verb {
-    Must include an example for all tenses (präsens, perfekt, imperativ) if applicable.
-}
-
-My-German-Preposition {
-    Must include an example for each Regiert field value.
-}
+There is a single empty line between any two adjacent examples via two <br> tags:
+    - e.g. for "Auge": "Mein Auge tut weh.<br><br>Sie hat blaue Augen."
 
 PHASE 4: ERROR REDUCTION MECHANISMS
 
 Mandatory checklist verification before output:
 Double check the results and don't assume that having followed the rules, they are inevitably correct.
 
-    2. All non-Beispiel fields complete.
+    1. All non-Beispiel fields complete.
 
-    3. Beispiel references all required elements.
+    2. ALL fields for the target Note Type are present in the output.
 
-    5. ALL fields for the target Note Type are present in the output.
+    3. Beispiel references all required different translations and usecases.
+
 
 PHASE 5: OUTPUT PROTOCOL
 
