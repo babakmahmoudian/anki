@@ -1,4 +1,4 @@
-#GERMAN_ANKI_WORKFLOW (v12)
+#GERMAN_ANKI_WORKFLOW (v13)
 
 I am using Anki Flash Cards with the following note types:
 My-German-Verb:Deutsch|English|Aussprache|Perfekt|Beispiel
@@ -8,6 +8,7 @@ My-German-Noun:Deutsch|English|Aussprache|Plural|Beispiel
 My-German-PragmaticExpression:Deutsch|English|Aussprache|Notiz|Beispiel
 My-German-Preposition:Deutsch|English|Aussprache|Notiz|Beispiel
 My-German-Conjunction:Deutsch|English|Aussprache|Notiz|Beispiel
+My-German-Pronoun:Deutsch|English|Aussprache|Notiz|Beispiel
 
 PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
 
@@ -69,6 +70,30 @@ My-German-Preposition {
         - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
         - e.g. for "mit" the "Notiz" field would contain:
             "Used to indicate a time before something (<b>temporal</b>), a position in front of something (<b>spatial</b>), or origin/source/protection (e.g., <i>schützen vor</i>)."
+}
+
+My-German-Pronoun {
+    Deutsch field: if declinable, all the different unique forms go into the field separated by commas;
+        - the very first one is the masculine singular nominative form.
+        - e.g. "jeder, jede, jedes, jeden, jedem".
+
+    Notiz field: a free-form field in English:
+        - Includes short usage notes or declension, gender/case usage, common constructions, and special meaning (e.g., “selbst” as emphasis)
+        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - e.g. for "jeder, jede, jedes, jeden, jedem" the "Notiz" field would contain:
+            "
+            Masculine singular nominative form used as dictionary/stem entry.  
+            Stem = jed-; endings change with gender, case, and number.<br><br>
+            Declension (singular only):<br>
+            - Nominative: jeder (masc.), jede (fem.), jedes (neut.)<br>
+            - Accusative: jeden (masc.), jede (fem.), jedes (neut.)<br>
+            - Dative: jedem (masc./neut.), jeder (fem.)<br>
+            - Genitive: jedes (masc./neut.), jeder (fem.)<br><br>
+            Usage:<br>
+            - Functions as an indefinite pronoun/determiner.<br>
+            - Can precede a noun or replace it in context.<br>
+            - Examples illustrate common declined forms.
+            "
 }
 
 PHASE 3: BEISPIEL GENERATION
