@@ -43,7 +43,7 @@ My-German-Noun {
 My-German-PragmaticExpression {
     Notiz field: a free-form field in English:
         - Describes all the social situations or conversational functions,
-        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
         - e.g. for "Es tut mir leid" the "Notiz" field would contain:
             "Used to express apology or sympathy; appropriate in both formal and informal contexts."
 }
@@ -51,7 +51,7 @@ My-German-PragmaticExpression {
 My-German-Conjunction {
     Notiz field: a free-form field in English:
         - Includes Verbstellung (koordinierend or subordinierend), short usage notes, rules, and extra information and explanation,
-        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
         - e.g. for "obwohl" the "Notiz" field would contain:
             "
             <p><b>"Obwohl"</b> is used to introduce a subordinate clause expressing a concession or contrast, similar to "although" or "even though" in English.</p>
@@ -67,7 +67,7 @@ My-German-Conjunction {
 My-German-Preposition {
     Notiz field: a free-form field in English:
         - Includes short usage notes or rules, and Regiert (Dativ, Akkusativ, Genitiv)
-        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
         - e.g. for "mit" the "Notiz" field would contain:
             "Used to indicate a time before something (<b>temporal</b>), a position in front of something (<b>spatial</b>), or origin/source/protection (e.g., <i>schützen vor</i>)."
 }
@@ -79,7 +79,7 @@ My-German-Pronoun {
 
     Notiz field: a free-form field in English:
         - Includes short usage notes or declension, gender/case usage, common constructions, and special meaning (e.g., “selbst” as emphasis)
-        - May contain text and paragraph formatting (<b>, <i>, <br>, <ol>, <ul>) as necessary.
+        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
         - e.g. for "jeder, jede, jedes, jeden, jedem" the "Notiz" field would contain:
             "
             Masculine singular nominative form used as dictionary/stem entry.  
@@ -100,8 +100,13 @@ PHASE 3: BEISPIEL GENERATION
 
 Each example is a full sentence in deutsch.
 
-There is a single empty line between any two adjacent examples via two <br> tags:
-    - e.g. for "Auge": "Mein Auge tut weh.<br><br>Sie hat blaue Augen."
+There is a single empty line between any two adjacent examples:
+    - e.g. for "Auge": 
+    "
+    Mein Auge tut weh.
+    
+    Sie hat blaue Augen.
+    "
 
 PHASE 4: ERROR REDUCTION MECHANISMS
 
