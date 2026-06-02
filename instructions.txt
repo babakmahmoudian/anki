@@ -1,57 +1,28 @@
-#GERMAN_ANKI_WORKFLOW (v13)
+#GERMAN_ANKI_WORKFLOW (v14)
 
-I am using Anki Flash Cards with the following note types:
-My-German-Verb:Deutsch|English|Aussprache|Perfekt|Beispiel
-My-German-Adjective:Deutsch|English|Aussprache|Beispiel
-My-German-Adverb:Deutsch|English|Aussprache|Beispiel
-My-German-Noun:Deutsch|English|Aussprache|Plural|Beispiel
-My-German-PragmaticExpression:Deutsch|English|Aussprache|Notiz|Beispiel
-My-German-Preposition:Deutsch|English|Aussprache|Notiz|Beispiel
-My-German-Conjunction:Deutsch|English|Aussprache|Notiz|Beispiel
-My-German-Pronoun:Deutsch|English|Aussprache|Notiz|Beispiel
+I am using Anki Flash Cards with the following note type and fields
+My-German-Note:deutsch|english|aussprache|notiz|beispiel_1|beispiel_2|...|beispiel_10
 
-PHASE 1: CLASSIFICATION & ESSENTIALS (All Note Types)
+The steps of the note generation workflow are as below:
 
-    1. Auto-detect word type.
+1. Auto-detect word type (noun, adjective, adverb, pronoun, preposition, conjunction, pragmatic expression, ...); default to the most common usage if ambiguous.
 
-    2. Identify target Note Type; default to the most common usage if ambiguous.
+2. Fill deutsch, english, aussprache, and notiz fields according to the instructions below:
+    2.1. deutsch: the German word (e.g. die Tochter, schlecht, gehen)
+        - for nouns, the German word with its definite article (der/die/das) in nominative singular, preserving the word's actual gender. If given a plural form (e.g. "Kinder"), generate the note for its singular (e.g. "der Hund", "die Katze", "das Kind").
+        - If the noun can stand for both masculine and feminine, put "der-die" (e.g. "der-die Bekannte").
+        - for adjectives, the positive (basic) form of the adjective, as used attributively with a masculine nominative noun (e.g. "gut").
+        - if given a comparative or superlative or a declined adjective (e.g. "besser", "besten", "guten"), generate the note for the infinitive/positive form ("gut").
+        - for verbs, default to the infinitive form (e.g. if given "sagt", generate the note for "sagen").
+        - for pronouns, if declinable, all the different unique forms go into the field separated by commas; the very first one is the masculine singular nominative form. (e.g. "jeder, jede, jedes, jeden, jedem").
 
-    3. Fill Deutsch, English, Aussprache. Aussprache should be in IPA format and enclosed in brackets (e.g. [lant]).
+    2.2. english: the English translation; synonyms separated by commas, different meanings separated by semicolons (e.g. for "eingeben" the english field value would be "to give in, to surrender; to indicate").
 
-PHASE 2: STRUCTURAL FIELDS (Type-Specific)
+    2.3. aussprache: the IPA phonetics enclosed in brackets (e.g. [lant]).
 
-My-German-Verb {
-    Perfekt: The auxiliary verb used for the Perfekt tense (haben or sein) plus the Partizip II (e.g. "haben + geschrieben")
-}
-
-My-German-Adverb {
-    No special instructions.
-}
-
-My-German-Adjective {
-    No special instructions.
-}
-
-My-German-Noun {
-    Deutsch field: contains the article followed by the Noun (e.g. "der Hund");
-        - If the noun can stand for both masculine and feminine, put "der-die" (e.g. "der-die Bekannte");
-        - if there exists a separate feminine form for the noun, prioratize the masculine form and use only the "der" article (e.g. "der Bäcker").
-
-    Plural field: standard plural form without article (e.g., Sohn→Söhne). Leave empty if no plural exists (e.g., uncountable nouns like "die Milch").
-}
-
-My-German-PragmaticExpression {
-    Notiz field: a free-form field in English:
-        - Describes all the social situations or conversational functions,
-        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
-        - e.g. for "Es tut mir leid" the "Notiz" field would contain:
-            "Used to express apology or sympathy; appropriate in both formal and informal contexts."
-}
-
-My-German-Conjunction {
-    Notiz field: a free-form field in English:
-        - Includes Verbstellung (koordinierend or subordinierend), short usage notes, rules, and extra information and explanation,
-        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
+    2.4. notiz: a free-form field in English:
+        - Includes short usage notes, rules, and extra information and explanations (e.g. whether coordinating or subordinating for conjunctions, plural form for nouns, weak or strong for verbs plus the past participle, ...)
+        - Use HTML formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>, <li>).
         - e.g. for "obwohl" the "Notiz" field would contain:
             "
             <p><b>"Obwohl"</b> is used to introduce a subordinate clause expressing a concession or contrast, similar to "although" or "even though" in English.</p>
@@ -62,71 +33,20 @@ My-German-Conjunction {
             <li>It is used to indicate that the action or fact in the main clause occurs despite the condition in the subordinate clause.</li>
             </ul>
             "
-}
 
-My-German-Preposition {
-    Notiz field: a free-form field in English:
-        - Includes short usage notes or rules, and Regiert (Dativ, Akkusativ, Genitiv)
-        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
-        - e.g. for "mit" the "Notiz" field would contain:
-            "Used to indicate a time before something (<b>temporal</b>), a position in front of something (<b>spatial</b>), or origin/source/protection (e.g., <i>schützen vor</i>)."
-}
+3. fill in the example sentences into the corresponding beispiel fields (beispiel_1, beispiel_2, ..., beispiel_10) according to the instructions below:
+    - Each example is a full sentence in deutsch (e.g. for "Auge": "Mein Auge tut weh.").
+    - Try to cover different tenses, persons, and cases that the word would take.
 
-My-German-Pronoun {
-    Deutsch field: if declinable, all the different unique forms go into the field separated by commas;
-        - the very first one is the masculine singular nominative form.
-        - e.g. "jeder, jede, jedes, jeden, jedem".
-
-    Notiz field: a free-form field in English:
-        - Includes short usage notes or declension, gender/case usage, common constructions, and special meaning (e.g., “selbst” as emphasis)
-        - Use formatting tags for readability (<b>, <i>, <br>, <ol>, <ul>).
-        - e.g. for "jeder, jede, jedes, jeden, jedem" the "Notiz" field would contain:
-            "
-            Masculine singular nominative form used as dictionary/stem entry.  
-            Stem = jed-; endings change with gender, case, and number.<br><br>
-            Declension (singular only):<br>
-            - Nominative: jeder (masc.), jede (fem.), jedes (neut.)<br>
-            - Accusative: jeden (masc.), jede (fem.), jedes (neut.)<br>
-            - Dative: jedem (masc./neut.), jeder (fem.)<br>
-            - Genitive: jedes (masc./neut.), jeder (fem.)<br><br>
-            Usage:<br>
-            - Functions as an indefinite pronoun/determiner.<br>
-            - Can precede a noun or replace it in context.<br>
-            - Examples illustrate common declined forms.
-            "
-}
-
-PHASE 3: BEISPIEL GENERATION
-
-Each example is a full sentence in deutsch.
-
-There is a single empty line between any two adjacent examples:
-    - e.g. for "Auge": 
-    "
-    Mein Auge tut weh.
-    
-    Sie hat blaue Augen.
-    "
-
-PHASE 4: ERROR REDUCTION MECHANISMS
-
-Mandatory checklist verification before output:
-Double check the results and don't assume that having followed the rules, they are inevitably correct.
-
-    1. All non-Beispiel fields complete.
-
-    2. ALL fields for the target Note Type are present in the output.
-
-    3. Beispiel references all required different translations and usecases.
+4. Perform a mandatory checklist verification before output:
+    - All non-Beispiel fields are complete.
+    - All of the fields are present in the output.
+    - Beispiels reference all required different translations and usecases.
 
 
-PHASE 5: OUTPUT PROTOCOL
-
-    1. State Target Note Type first
-
-    2. Process fields in exact order as listed in the note types
-
-    3. For each field, follow this exact sequence:
+5: Output the generated note:
+    - Process fields in exact order as listed (deutsch, english, aussprache, notiz, beispiel_1, beispiel_2, ...)
+    - For each field, follow this exact sequence:
         a. Write the field name in plain text.
         b. On the very next line, create a code block.
         c. Place only the field's value inside this code block.
